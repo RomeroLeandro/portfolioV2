@@ -1,5 +1,5 @@
 import React from "react";
-import fotoHome from "~/public/assets/fotoHome.jpg";
+import fotoHome from "../public/assets/fotoHome.jpg";
 import { MdExpandMore } from "react-icons/md";
 import Image from "next/image";
 import Link from "next/link";
