@@ -2,10 +2,10 @@ import React from "react";
 
 import { MdExpandMore } from "react-icons/md";
 
-import installNode from "../public/assets/portfolio/installNode.jpg";
-import reactParallax from "../public/assets/portfolio/reactParallax.jpg";
-import usestate from "../public/assets/portfolio/usestate.jpg";
-import reactWeather from "../public/assets/portfolio/reactWeather.jpg";
+import portfoliov1 from "../public/assets/portfolio/portfoliov1.PNG"
+import romeroDesing from "../public/assets/portfolio/romeroDesing.PNG"
+import dixerGaming from "../public/assets/portfolio/dixerGaming.PNG"
+import bairesTrips from "../public/assets/portfolio/bairesTrips.PNG"
 import Link from "next/link";
 import Image from "next/image";
 
@@ -13,34 +13,45 @@ const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
-      title: "react weather app",
-      imageSrc: reactWeather,
-      url: "react-weather",
+      title: "portfolio v1",
+      imageSrc: portfoliov1,
+      url: "portfolio-v1",
     },
     {
       id: 2,
-      title: "install node",
-      imageSrc: installNode,
-      url: "install-node",
+      title: "romero desing",
+      imageSrc: romeroDesing,
+      url: "romero-desing",
     },
     {
       id: 3,
-      title: "use state explained",
-      imageSrc: usestate,
-      url: "use-state-hook",
+      title: "dixer gaming",
+      imageSrc: dixerGaming,
+      url: "dixer-gaming",
     },
     {
       id: 4,
-      title: "react parallax scroll",
-      imageSrc: reactParallax,
-      url: "react-parallax",
+      title: "baires trips",
+      imageSrc: bairesTrips,
+      url: "baires-trips",
     },
+    // {
+    //     id: 5,
+    //     title: "portfolio v2",
+    //     imageSrc: portfoliov2,
+    //     url: "portfolio-v2",
+    //   },{
+    //     id: 6,
+    //     title: "codeando",
+    //     imageSrc: codeandoPlataforma,
+    //     url: "codeando-plataforma",
+    //   }
   ];
 
   return (
-    <div id="portfolio" className="w-full">
+    <div id="portfolio" className="w-full mx-auto">
       <div className="max-w-screen-xl mx-auto px-8 py-16 text-center md:text-left">
-        <h2 className="text-5xl md:text-7xl tracking-wider uppercase text-blue-500 font-bold">
+        <h2 className="text-5xl md:text-7xl tracking-wider uppercase text-violet-500 font-bold">
           portfolio
         </h2>
         <p className="py-4 max-w-lg">
@@ -52,14 +63,14 @@ const Portfolio = () => {
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
           {portfolios.map(({ id, title, imageSrc, url }) => (
             <Link key={id} href={`/portfolio/${url}`}>
-              <div className="cursor-pointer group shadow-md shadow-gray-600 overflow-hidden rounded-md">
+              <div className="cursor-pointer group shadow-md shadow-violet-300 overflow-hidden rounded-md">
                 <Image
                   src={imageSrc}
                   alt={title}
                   className="rounded-md duration-200 
                   hover:scale-110"
                 />
-                <h2 className="text-center text-base capitalize my-4 font-light duration-200 group-hover:underline underline-offset-4">
+                <h2 className="text-center text-base capitalize my-4 font-light duration-200 group-hover:font-bold">
                   {title}
                 </h2>
               </div>
@@ -69,8 +80,8 @@ const Portfolio = () => {
 
         <div className="flex items-center justify-center">
           <Link href="/portfolio">
-            <div className="group flex items-center justify-center my-8 bg-blue-500 text-white px-6 py-3 font-bold uppercase rounded-md tracking-wider cursor-pointer">
-              all projects
+            <div className="group flex items-center justify-center my-8 bg-violet-500 text-white px-6 py-3 font-bold uppercase rounded-md tracking-wider cursor-pointer">
+              todos los proyectos
               <span className="-rotate-90 duration-100 ease-in group-hover:translate-x-5">
                 <MdExpandMore size={25} />
               </span>

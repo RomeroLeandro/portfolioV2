@@ -1,5 +1,5 @@
 import Contact from "../components/Contact";
-import Experience from "../components/Experience";
+import Skills from "../components/Skills";
 import HomePage from "../components/HomePage";
 import Me from "../components/Me";
 import Portfolio from "../components/Portfolio";
@@ -9,7 +9,7 @@ export default function Home() {
     <div>
       <HomePage />
       <Portfolio />
-      <Experience />
+      <Skills />
       <Me />
       <Contact />
     </div>

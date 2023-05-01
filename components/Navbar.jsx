@@ -12,20 +12,25 @@ import {
 
 const Navbar = () => {
   const [navigation, setNavigation] = useState(false);
-  const [pageScroll, setPageScroll] = useState(false);
+  const [scroll, setScroll] = useState(false);
 
   useEffect(() => {
-    const sub = window.addEventListener("scroll", () =>
-      setPageScroll(window.scrollY >= 90)
-    );
-
-    return sub;
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 0) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const links = [
     {
       id: 1,
-      link: "home",
+      link: "inicio",
     },
     {
       id: 2,
@@ -33,28 +38,28 @@ const Navbar = () => {
     },
     {
       id: 3,
-      link: "experience",
+      link: "skills",
     },
     {
       id: 4,
-      link: "me",
+      link: "sobre-mi",
     },
     {
       id: 5,
-      link: "contact",
+      link: "contacto",
     },
   ];
 
   return (
-    <div
-      className={`w-full h-20 z-10 fixed bg-white text-black duration-300 ease-in ${
-        pageScroll && "bg-black text-[#fff]"
-      }`}
+    <nav
+    className={`w-full h-15 z-10 fixed duration-300 ease-in ${
+      scroll ? "bg-violet-500 text-[#fff]" : "bg-white text-black"
+    }`}
     >
       <div className="flex justify-between items-center w-full h-full max-w-screen-xl mx-auto p-4">
-        <Link href="/#home">
-          <h1 className="text-3xl lg:text-4xl font-bold uppercase underline underline-offset-2 tracking-wider cursor-pointer">
-            yash
+        <Link href="/#inicio">
+          <h1 className="text-3xl lg:text-2xl font-bold uppercase tracking-wider cursor-pointer">
+            leandro romero
           </h1>
         </Link>
 
@@ -62,7 +67,7 @@ const Navbar = () => {
           <ul className="hidden md:flex">
             {links.map(({ id, link }) => (
               <Link key={id} href={`/#${link}`}>
-                <li className="ml-10 text-sm uppercase cursor-pointer duration-200 ease-out hover:scale-105 tracking-wider">
+                <li className="ml-10 text-xs uppercase cursor-pointer duration-200 ease-out hover:scale-105 tracking-wider">
                   {link}
                 </li>
               </Link>
@@ -90,7 +95,7 @@ const Navbar = () => {
         <div
           className={
             navigation
-              ? "fixed left-0 top-0 w-4/5 h-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-10 ease-in duration-500"
+              ? "fixed left-0 top-0 w-4/5 h-full bg-gradient-to-r from-violet-500 to-violet-700 text-white p-10 ease-in duration-500"
               : "fixed top-0 left-[-100%] p-10 h-full ease-in duration-500"
           }
         >
@@ -99,9 +104,9 @@ const Navbar = () => {
               <Link href="/#home">
                 <h2
                   onClick={() => setNavigation(false)}
-                  className="text-3xl font-bold uppercase underline underline-offset-2 tracking-wider cursor-pointer"
+                  className="text-3xl font-bold uppercase tracking-wider cursor-pointer"
                 >
-                  yash
+                  leandro romero
                 </h2>
               </Link>
               <div
@@ -146,7 +151,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
