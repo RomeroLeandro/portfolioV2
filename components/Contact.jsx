@@ -1,7 +1,5 @@
 import Image from "next/image";
 import React from "react";
-
-import contactus from "../public/assets/contact-us.jpg";
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Contact = () => {
@@ -32,11 +30,6 @@ const Contact = () => {
                 <FaGithub size={25} />
               </div>
             </div>
-          </div>
-
-          {/* form stuff  */}
-          <div className="w-full md:w-1/2 h-full rounded-xl p-4">
-            
           </div>
         </div>
       </div>

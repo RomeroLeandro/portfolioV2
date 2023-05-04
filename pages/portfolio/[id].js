@@ -47,21 +47,7 @@ const portfolios = [
     urlGitub: "https://github.com/RomeroLeandro/simuladorCostos",
     description: "holaaaaaaaaaaaaaaaaaaaa",
     urlDeploy: "",
-  },
-  // {
-  //   id: 5,
-  //   title: "portfolio v2",
-  //   imageSrc: portfoliov2,
-  //   url: "portfolio-v2",
-  //   urlGitub: "https://github.com/RomeroLeandro/portfolioV2",
-  //   description: "",
-  //   urlDeploy: "",
-  // },
-  //     id: 6,
-  //     title: "codeando",
-  //     imageSrc: codeandoPlataforma,
-  //     url: "codeando-plataforma",
-  //   }
+  }
 ];
 
 const getPortfolioFrom = (url) => portfolios.filter((p) => p.url === url)[0];

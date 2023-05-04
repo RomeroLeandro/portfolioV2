@@ -33,17 +33,6 @@ export const getStaticProps = async () => {
       imageSrc: bairesTrips,
       url: "baires-trips",
     },
-    // {
-    //     id: 5,
-    //     title: "portfolio v2",
-    //     imageSrc: portfoliov2,
-    //     url: "portfolio-v2",
-    //   },{
-    //     id: 6,
-    //     title: "codeando",
-    //     imageSrc: codeandoPlataforma,
-    //     url: "codeando-plataforma",
-    //   }
   ];
 
   return {
