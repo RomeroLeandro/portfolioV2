@@ -8,7 +8,7 @@ const HomePage = () => {
     <div id="inicio" className="h-screen w-full text-center">
       <div className="max-w-screen-xl mx-auto w-full h-full px-8 py-16 flex flex-col justify-around items-center">
         <div className="w-80 h-52 mx-auto overflow-hidden rounded-xl">
-          <Image src="/fotoHome.jpg" alt="me" />
+          <Image src="../public/fotohome.jpg" alt="me" />
         </div>
 
         <h1 className="uppercase font-bold text-gray-700 text-6xl">
