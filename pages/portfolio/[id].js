@@ -18,6 +18,8 @@ const portfolios = [
     imageSrc: portfoliov1,
     url: "portfolio-v1",
     urlGitub: "https://github.com/RomeroLeandro/PortfolioV1",
+    description: "",
+    urlDeploy: "",
   },
   {
     id: 2,
@@ -25,6 +27,8 @@ const portfolios = [
     imageSrc: romeroDesing,
     url: "romero-desing",
     urlGitub: "https://github.com/RomeroLeandro/RomeroDesing-ecommerce",
+    description: "",
+    urlDeploy: "",
   },
   {
     id: 3,
@@ -32,6 +36,8 @@ const portfolios = [
     imageSrc: dixerGaming,
     url: "dixer-gaming",
     urlGitub: "https://github.com/RomeroLeandro/Dixer-gaming-ecommerce",
+    description: "",
+    urlDeploy: "",
   },
   {
     id: 4,
@@ -39,13 +45,18 @@ const portfolios = [
     imageSrc: bairesTrips,
     url: "baires-trips",
     urlGitub: "https://github.com/RomeroLeandro/simuladorCostos",
+    description: "holaaaaaaaaaaaaaaaaaaaa",
+    urlDeploy: "",
   },
   // {
-  //     id: 5,
-  //     title: "portfolio v2",
-  //     imageSrc: portfoliov2,
-  //     url: "portfolio-v2",
-  //   },{
+  //   id: 5,
+  //   title: "portfolio v2",
+  //   imageSrc: portfoliov2,
+  //   url: "portfolio-v2",
+  //   urlGitub: "https://github.com/RomeroLeandro/portfolioV2",
+  //   description: "",
+  //   urlDeploy: "",
+  // },
   //     id: 6,
   //     title: "codeando",
   //     imageSrc: codeandoPlataforma,
@@ -74,7 +85,9 @@ export async function getStaticProps({ params }) {
   };
 }
 
-const OnePortfolio = ({ portfolio: { title, imageSrc, urlGitub } }) => {
+const OnePortfolio = ({
+  portfolio: { title, imageSrc, urlGitub, description, urlDeploy },
+}) => {
   return (
     <div className="h-fit w-full text-center">
       <div className="max-w-screen-xl mx-auto w-full h-full pt-24 p-8 flex flex-col">
@@ -98,20 +111,10 @@ const OnePortfolio = ({ portfolio: { title, imageSrc, urlGitub } }) => {
           Descripcion
         </h2>
 
-        <p>
-          Human thy god sainted is the distinctly shrieked grave bird shrieked,
-          yore borrow nevermore but gaunt maiden have nothing darkness, answer
-          evermore word there from raven, sorrowsorrow from on and nevermore of
-          core. Whom the meant and while i of respiterespite his lamplight. Or
-          being weary parting grave lent if. Rare came stillness whether the
-          lord. Bust myself whom of soul silken. The that there this my, quaint
-          that only lenore stern muttered and nothing or tapping. Here lie
-          lining i still. A tis some and chamber flitting. Lamplight radiant
-          from no yet what, upon that that one decorum leave.
-        </p>
+        <p>{description}</p>
 
         <div className="flex items-center justify-center gap-10">
-          <Link href="/">
+          <Link href={urlDeploy}>
             <div className="group flex items-center justify-center my-8 bg-violet-500 text-white px-6 py-3 font-bold uppercase rounded-md tracking-wider cursor-pointer">
               demo
               <span className="-rotate-90 duration-100 ease-in group-hover:-rotate-180">
