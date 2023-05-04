@@ -1,5 +1,4 @@
 import React from "react";
-import fotoHome from "../public/assets/fotoHome.jpg";
 import { MdExpandMore } from "react-icons/md";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,7 +8,7 @@ const HomePage = () => {
     <div id="inicio" className="h-screen w-full text-center">
       <div className="max-w-screen-xl mx-auto w-full h-full px-8 py-16 flex flex-col justify-around items-center">
         <div className="w-80 h-52 mx-auto overflow-hidden rounded-xl">
-          <Image src={fotoHome} alt="me" />
+          <Image src="/fotoHome.jpg" alt="me" />
         </div>
 
         <h1 className="uppercase font-bold text-gray-700 text-6xl">
