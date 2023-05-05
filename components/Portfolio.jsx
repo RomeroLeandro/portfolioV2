@@ -1,13 +1,13 @@
-import React from "react";
+import React from "react"
 
-import { MdExpandMore } from "react-icons/md";
+import { MdExpandMore } from "react-icons/md"
 
 import portfoliov1 from "../public/assets/portfolio/portfoliov1.PNG"
 import romeroDesing from "../public/assets/portfolio/romeroDesing.PNG"
 import dixerGaming from "../public/assets/portfolio/dixerGaming.PNG"
 import bairesTrips from "../public/assets/portfolio/bairesTrips.PNG"
-import Link from "next/link";
-import Image from "next/image";
+import Link from "next/link"
+import Image from "next/image"
 
 const Portfolio = () => {
   const portfolios = [
@@ -34,7 +34,7 @@ const Portfolio = () => {
       title: "baires trips",
       imageSrc: bairesTrips,
       url: "baires-trips",
-    }
+    },
   ];
 
   return (
@@ -43,10 +43,8 @@ const Portfolio = () => {
         <h2 className="text-5xl md:text-7xl tracking-wider uppercase text-violet-500 font-bold">
           portfolio
         </h2>
-        <p className="py-4 max-w-lg">
-          While only that hauntedtell many purple no lent cushions more heart.
-          Soul cushions the still if i, hath lamplight mortals the rapping have
-          me and.
+        <p className="py-4 max-w-max">
+          He trabajado en una variedad de proyectos, a través de ellos, he demostrado habilidades valiosas en la planificación, desarrollo y lanzamiento de soluciones web. Cada proyecto ha sido construido cuidadosamente, tomando en cuenta los requerimientos y necesidades. He implementado soluciones personalizadas y escalables, creando aplicaciones web.
         </p>
 
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">

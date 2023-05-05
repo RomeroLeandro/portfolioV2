@@ -1,11 +1,13 @@
 import React from "react";
-import portfoliov1 from "../../public/assets/portfolio/portfoliov1.PNG";
-import romeroDesing from "../../public/assets/portfolio/romeroDesing.PNG";
-import dixerGaming from "../../public/assets/portfolio/dixerGaming.PNG";
-import bairesTrips from "../../public/assets/portfolio/bairesTrips.PNG";
-import { MdExpandMore } from "react-icons/md";
-import Link from "next/link";
-import Image from "next/image";
+import portfoliov1 from "../../public/assets/portfolio/portfoliov1.PNG"
+import romeroDesing from "../../public/assets/portfolio/romeroDesing.PNG"
+import dixerGaming from "../../public/assets/portfolio/dixerGaming.PNG"
+import bairesTrips from "../../public/assets/portfolio/bairesTrips.PNG"
+import portfoliov2 from "../../public/assets/portfolio/portfoliov2.PNG"
+import { MdExpandMore } from "react-icons/md"
+import Link from "next/link"
+import Image from "next/image"
+import { BiChevronLeft } from "react-icons/bi"
 
 export const getStaticProps = async () => {
   const portfolios = [
@@ -33,6 +35,13 @@ export const getStaticProps = async () => {
       imageSrc: bairesTrips,
       url: "baires-trips",
     },
+    {
+      id: 5,
+      title: "portfolio v2",
+      imageSrc: portfoliov2,
+      url: "portfolio-v2",
+    },
+
   ];
 
   return {
@@ -44,6 +53,13 @@ const PortfoliosRoute = ({ portfolios }) => {
   return (
     <div id="portfolio" className="w-full">
       <div className="max-w-screen-xl mx-auto pt-24 p-4 text-center md:text-left">
+        <div className="flex">
+          <Link href="/#portfolio">
+            <div className="flex items-center justify-center my-8 text-violet-500 font-bold capitalize cursor-pointer">
+              <BiChevronLeft size={25} /> volver
+            </div>
+          </Link>
+        </div>
         <h2 className="text-5xl md:text-7xl tracking-wider uppercase text-violet-500 font-bold pb-16">
           portfolio
         </h2>

@@ -102,10 +102,8 @@ const Skills = () => {
         <h2 className="text-5xl md:text-7xl tracking-wider uppercase text-violet-500 font-bold">
           skills
         </h2>
-        <p className="py-4 max-w-lg">
-          While only that hauntedtell many purple no lent cushions more heart.
-          Soul cushions the still if i, hath lamplight mortals the rapping have
-          me and.
+        <p className="py-4 max-w-max">
+        Trabajo con un conjunto de herramientas y tecnologías para construir aplicaciones web altamente eficientes, escalables y visualmente atractivas.
         </p>
 
         <div className="grid lg:grid-cols-4 gap-8">

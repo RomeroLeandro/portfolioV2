@@ -1,5 +1,5 @@
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import Link from "next/link"
+import React, { useEffect, useState } from "react"
 
 import {
   FaBars,
@@ -8,7 +8,7 @@ import {
   FaGithub,
   FaTwitter,
   FaLinkedin,
-} from "react-icons/fa";
+} from "react-icons/fa"
 
 const Navbar = () => {
   const [navigation, setNavigation] = useState(false);
@@ -52,9 +52,8 @@ const Navbar = () => {
 
   return (
     <nav
-    className={`w-full h-15 z-10 fixed duration-300 ease-in ${
-      scroll ? "bg-violet-500 text-[#fff]" : "bg-white text-black"
-    }`}
+      className={`w-full h-15 z-10 fixed duration-300 ease-in ${scroll ? "bg-violet-500 text-[#fff] shadow-red-900" : "bg-white text-black"
+        }`}
     >
       <div className="flex justify-between items-center w-full h-full max-w-screen-xl mx-auto p-4">
         <Link href="/#inicio">
