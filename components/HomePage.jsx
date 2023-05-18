@@ -7,7 +7,7 @@ import Link from "next/link"
 const HomePage = () => {
   return (
     <div id="inicio" className="h-screen w-full text-center">
-      <div className="max-w-screen-xl mx-auto w-full h-full px-8 py-16 flex flex-col pt-20 items-center">
+      <div className="max-w-screen-xl mx-auto w-full h-full px-8 py-16 flex flex-col justify-around pt-20 items-center">
 
         <Image className="mx-auto overflow-hidden rounded-2xl" src={fotoHome} width="320px" height="210px" alt="me" />
 
